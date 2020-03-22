@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng số nguyên dương trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [-2,3,5,-9,12,6,-6];
+    document.write("Các phần tử trong mảng vừa nhập là " +arr+"<br/>");
+    function checkSND(n) {
+        if (n>0) {
+            return n;
+        } else {
+            return false;
+        }
+    }
+    function sumSND() {
+        let total = 0;
+        for (i=0;i<arr.length;i++) {
+            if (checkSND(arr[i])) {
+                total += arr[i];
+            }
+        } return total;
+    }
+    let tongSND = sumSND(arr);
+    document.write("Tổng số nguyên dương trong mảng là: "+tongSND);
+</script>
+</body>
+</html>
