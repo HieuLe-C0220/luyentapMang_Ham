@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tính nguyên tố của 1 số</title>
+</head>
+<body>
+<script>
+    let elementCount = Number(prompt("Mời nhập số lượng phần tử trong mảng"));
+    let arr = Array();
+    for (i=0;i<elementCount;i++) {
+        arr[i] = parseFloat(prompt("Nhập phần tử thứ "+i));
+    }
+    document.write("Mảng của bạn là: "+ arr + "<br/>");
+    function checkSNT(n) {
+        if (n<2) {
+            return false;
+        } else if (n===2) {
+            return true;
+        } else {
+            for (i=2;i<n;i++) {
+                if (n%i===0) {
+                    return false;
+                }
+            } return true;
+        }
+    }
+    let arr1 = Array();
+    let k = 0;
+    for (j=0;j<arr.length;j++) {
+        if (checkSNT(arr[j])) {
+            arr1[k] = arr[j];
+            k++;
+        }
+    }
+    document.write("Các số nguyên tố trong dãy vừa nhập là: " +arr1);
+</script>
+</body>
+</html>
